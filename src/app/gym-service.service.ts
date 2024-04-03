@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GymServiceService {
-  private Gym_Home_API_URL = '/api/gyms';
+  private Gym_Home_API_URL = 'http://localhost:8080/gyms';
 
   constructor(private http: HttpClient) {}
 

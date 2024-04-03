@@ -2,11 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { GymCardComponent } from './gym-card/gym-card.component';
 import { GymServiceService } from '../../gym-service.service';
 import { GymBannerComponent } from './gym-banner/gym-banner.component';
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-gym-cards',
   standalone: true,
-  imports: [GymCardComponent, GymBannerComponent],
+  imports: [GymCardComponent, GymBannerComponent, CommonModule],
   templateUrl: './gym-cards.component.html',
   styleUrl: './gym-cards.component.css',
 })
