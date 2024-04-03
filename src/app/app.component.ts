@@ -5,6 +5,7 @@ import { GymCardsComponent } from './components/gym-cards/gym-cards.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,7 @@ import { CommonModule } from '@angular/common';
     NavbarComponent,
     GymCardsComponent,
     FooterComponent,
-    
+    FormsModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',

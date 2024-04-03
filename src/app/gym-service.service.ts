@@ -13,4 +13,8 @@ export class GymServiceService {
   getAllGyms(): Observable<any[]> {
     return this.http.get<any[]>(this.Gym_Home_API_URL);
   }
+  SaveGym(data: any): Observable<any> {
+    const url = `${this.Gym_Home_API_URL}/save`;
+    return this.http.post<any>(url, data);
+  }
 }
