@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -8,12 +8,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './gym-banner.component.html',
   styleUrl: './gym-banner.component.css',
 })
-export class GymBannerComponent {
+export class GymBannerComponent implements OnInit {
   newGymName: string = '';
 
   submitForm() {
-    console.log('hello from modal');
+    console.log('Submitted Gym Name:', this.newGymName);
+
     this.newGymName = '';
-    console.log(this.newGymName);
   }
+
+  ngOnInit(): void {}
 }
