@@ -22,7 +22,9 @@
   </div>
   <div class="navbar-center hidden lg:flex"></div>
   <div class="navbar-end gap-2">
-    <a href="/" class="btn border-none bg-blue-200 text-black">About</a>
-    <a href="/" class="btn bg-teal-500 border-none">Home</a>
+    <a [routerLink]="['/about']" class="btn border-none bg-blue-200 text-black"
+      >About</a
+    >
+    <a [routerLink]="['/']" class="btn bg-teal-500 border-none">Home</a>
   </div>
 </div>
