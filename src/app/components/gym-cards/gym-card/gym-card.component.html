@@ -1,11 +1,15 @@
-<div class="card w-96 bg-base-100 shadow-xl mb-10 cursor-pointer card-hover">
+<div
+  class="card lg:w-96 md:w-72 w-56 bg-base-100 shadow-xl mb-10 cursor-pointer card-hover"
+>
   <figure>
     <img src="https://www.pokemongoplusplus.com/img/img-1.jpg" alt="Shoes" />
   </figure>
   <div class="card-body">
     <h2 class="card-title flex justify-center">{{ gym_data.name }}</h2>
     <!-- Edit button -->
-    <button class="edit-button">Edit</button>
+    <button class="edit-button" [routerLink]="['gym', 'edit', gym_data.id]">
+      Edit
+    </button>
 
     <div class="card-actions flex justify-center">
       <!-- Add other actions/buttons if needed -->

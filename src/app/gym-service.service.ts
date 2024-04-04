@@ -17,4 +17,12 @@ export class GymServiceService {
     const url = `${this.Gym_Home_API_URL}/save`;
     return this.http.post<any>(url, data);
   }
+  getSpecificGym(data: any): Observable<any> {
+    const url = `${this.Gym_Home_API_URL}/${data}`;
+    return this.http.get<any>(url, data);
+  }
+  EditGym(id: number, data: any): Observable<any> {
+    const url = `${this.Gym_Home_API_URL}/update/${id}`;
+    return this.http.put<any>(url, data);
+  }
 }
