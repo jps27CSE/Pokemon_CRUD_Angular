@@ -15,6 +15,19 @@
             [(ngModel)]="trainerName"
           />
         </div>
+
+        <div class="form-control mt-2">
+          <input
+            type="text"
+            id="badge"
+            name="badge"
+            placeholder="Enter badge name"
+            class="flex justify-center items-center m-auto input input-bordered w-full max-w-md mt-2"
+            required
+            [(ngModel)]="badge"
+          />
+        </div>
+
         <div class="form-control mt-2">
           <label
             for="badgeSelect"
@@ -25,20 +38,20 @@
             id="badgeSelect"
             name="badgeSelect"
             class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
-            multiple
-            [(ngModel)]="selectedPokemonIds"
+            [(ngModel)]="selectedPokemonId"
           >
+            <option value="" disabled>Select a Pokemon</option>
             <ng-container *ngFor="let pokemon of pokemons">
               <option [value]="pokemon.id">{{ pokemon.name }}</option>
             </ng-container>
           </select>
-          <button
+          <!-- <button
             type="button"
             class="btn btn-error bg-green-400 mt-2"
-            (click)="addPokemon(selectedPokemonIds)"
+            (click)="addPokemon(selectedPokemonId)"
           >
             Add Pokemon
-          </button>
+          </button> -->
         </div>
         <div class="form-control mt-2">
           <label
@@ -50,20 +63,20 @@
             id="typeSelect"
             name="typeSelect"
             class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm rounded-md"
-            multiple
-            [(ngModel)]="selectedGymIds"
+            [(ngModel)]="selectedGymId"
           >
+            <option value="" disabled>Select a Gym</option>
             <ng-container *ngFor="let gym of gyms">
               <option [value]="gym.id">{{ gym.name }}</option>
             </ng-container>
           </select>
-          <button
+          <!-- <button
             type="button"
             class="btn btn-error bg-green-400 mt-2"
-            (click)="addGym(selectedGymIds)"
+            (click)="addGym(selectedGymId)"
           >
             Add Gym
-          </button>
+          </button> -->
         </div>
         <div class="flex justify-center mt-4">
           <button

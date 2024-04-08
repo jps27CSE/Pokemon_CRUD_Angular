@@ -21,7 +21,7 @@ export const routes: Routes = [
     component: GymCardEditComponent,
   },
   {
-    path: 'trainer/:id',
+    path: 'trainer',
     component: TrainerTableComponent,
   },
   {
