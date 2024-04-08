@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GymServiceService {
-  private Gym_Home_API_URL = 'http://localhost:8080/gyms';
+  private Gym_Home_API_URL = 'http://localhost:8080/gym';
 
   constructor(private http: HttpClient) {}
 
@@ -14,7 +14,7 @@ export class GymServiceService {
     return this.http.get<any[]>(this.Gym_Home_API_URL);
   }
   SaveGym(data: any): Observable<any> {
-    const url = `${this.Gym_Home_API_URL}/save`;
+    const url = `${this.Gym_Home_API_URL}`;
     return this.http.post<any>(url, data);
   }
   getSpecificGym(data: any): Observable<any> {
@@ -22,12 +22,12 @@ export class GymServiceService {
     return this.http.get<any>(url, data);
   }
   EditGym(id: number, data: any): Observable<any> {
-    const url = `${this.Gym_Home_API_URL}/update/${id}`;
+    const url = `${this.Gym_Home_API_URL}/${id}`;
     return this.http.put<any>(url, data);
   }
 
   DeleteGym(id: number): Observable<any> {
-    const url = `${this.Gym_Home_API_URL}/delete/${id}`;
+    const url = `${this.Gym_Home_API_URL}/${id}`;
     return this.http.delete<any>(url);
   }
 }

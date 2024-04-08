@@ -23,7 +23,7 @@ export class GymBannerComponent implements OnInit {
     this.gymService.SaveGym(newName).subscribe(
       (response) => {
         console.log('New gym created:', response);
-        location.reload();
+        window.location.reload();
         this.router.navigate(['/gyms']);
       },
       (error) => {
