@@ -46,4 +46,16 @@ export class GymCardEditComponent implements OnInit {
       }
     );
   }
+
+  deleteGym() {
+    this.gymService.DeleteGym(this.userID).subscribe(
+      (response) => {
+        console.log('Deleted Successfully', response);
+        this.router.navigate(['/']);
+      },
+      (error) => {
+        console.log('Error ', error);
+      }
+    );
+  }
 }

@@ -25,4 +25,9 @@ export class GymServiceService {
     const url = `${this.Gym_Home_API_URL}/update/${id}`;
     return this.http.put<any>(url, data);
   }
+
+  DeleteGym(id: number): Observable<any> {
+    const url = `${this.Gym_Home_API_URL}/delete/${id}`;
+    return this.http.delete<any>(url);
+  }
 }
