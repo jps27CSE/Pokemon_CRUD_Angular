@@ -1,0 +1,8 @@
+<app-pokemon-list-banner></app-pokemon-list-banner>
+<div
+  class="lg:w-[1300px] mx-auto grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1"
+>
+  <div *ngFor="let pokemon of pokemons">
+    <app-pokemon-card [pokemon_data]="pokemon"></app-pokemon-card>
+  </div>
+</div>
