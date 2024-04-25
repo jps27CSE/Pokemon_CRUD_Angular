@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { TrainerService } from '../../trainer.service';
+import { TrainerService } from '../../../services/trainer.service';
 import { RouterLink } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TrainerListComponent } from "../../views/trainer-list/trainer-list.component";
 
 @Component({
-  selector: 'app-trainer-table',
-  imports: [RouterLink, CommonModule],
-  standalone: true,
-  templateUrl: './trainer-table.component.html',
-  styleUrls: ['./trainer-table.component.css'],
+    selector: 'app-trainer-table-container',
+    standalone: true,
+    templateUrl: './trainer-table-container.component.html',
+    styleUrls: ['./trainer-table-container.component.css'],
+    imports: [RouterLink, CommonModule, TrainerListComponent]
 })
-export class TrainerTableComponent implements OnInit {
+export class TrainerTableContainerComponent implements OnInit {
   trainers: any[] = [];
 
   constructor(private trainerService: TrainerService) {}

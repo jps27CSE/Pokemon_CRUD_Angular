@@ -1,0 +1,20 @@
+<div class="hero bg-base-200">
+  <div class="hero-content text-center">
+    <div class="max-w-md">
+      <h1 class="text-5xl font-bold mt-10" data-aos="fade-down">
+        Trainer List
+      </h1>
+      <img
+        class="w-48 mx-auto mt-5"
+        src="https://freepngimg.com/thumb/pokemon/20090-7-pokemon-ash-hd.png"
+        alt=""
+      />
+
+      <button class="btn btn-primary mt-5" [routerLink]="['/trainer/create']">
+        Create Trainer
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-trainer-list [trainers]="trainers"> </app-trainer-list>

@@ -1,0 +1,36 @@
+<div class="overflow-x-auto max-w-6xl mx-auto mt-10 mb-10">
+    <table class="table w-full bg-white shadow-md rounded-lg">
+      <!-- Head -->
+      <thead class="bg-gray-100">
+        <tr>
+          <th class="px-6 py-3 border-b border-gray-200">Name</th>
+          <th class="px-6 py-3 border-b border-gray-200">Badge</th>
+          <th class="px-6 py-3 border-b border-gray-200">Actions</th>
+        </tr>
+      </thead>
+      <tbody data-aos="flip-up">
+        <!-- Loop through trainers -->
+        <tr *ngFor="let trainer of trainers">
+          <td class="px-6 py-4 whitespace-nowrap">{{ trainer.name }}</td>
+          <td class="px-6 py-4 whitespace-nowrap">{{ trainer.badge }}</td>
+          <td class="px-6 py-4 whitespace-nowrap">
+            <!-- <button class="btn btn-ghost bg-green-400 btn-xs mr-1">View</button> -->
+            <button class="btn btn-ghost bg-blue-400 btn-xs mr-1">Edit</button>
+            <!-- <button
+              class="btn btn-ghost bg-red-400 btn-xs mr-1"
+              (click)="deleteTrainer(trainer)"
+            >
+              Delete
+            </button> -->
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th class="px-6 py-3 border-t border-gray-200">Name</th>
+          <th class="px-6 py-3 border-t border-gray-200">Badge</th>
+          <th class="px-6 py-3 border-t border-gray-200">Actions</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
