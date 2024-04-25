@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { GymServiceService } from '../../../gym-service.service';
+import { GymServiceService } from '../../../services/gym-service.service';
 import { Router } from '@angular/router';
 
 @Component({

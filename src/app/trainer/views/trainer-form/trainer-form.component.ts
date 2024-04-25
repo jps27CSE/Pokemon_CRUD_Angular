@@ -1,15 +1,15 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  selector: 'app-trainer-registration-form',
+  selector: 'app-trainer-form',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './trainer-registration-form.component.html',
-  styleUrl: './trainer-registration-form.component.css',
+  templateUrl: './trainer-form.component.html',
+  styleUrl: './trainer-form.component.css',
 })
-export class TrainerRegistrationFormComponent implements OnInit {
+export class TrainerFormComponent implements OnInit {
   gyms: any[] = [];
   selectedGymId: string = '';
   pokemons: any[] = [];
@@ -18,6 +18,7 @@ export class TrainerRegistrationFormComponent implements OnInit {
   badge: string = '';
 
   @Output() createTrainer = new EventEmitter<any>();
+  @Input() pageType!: string;
 
   ngOnInit(): void {}
 

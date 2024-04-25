@@ -2,6 +2,9 @@ import { Routes } from "@angular/router";
 import { GymCardsComponent } from "./components/gym-cards/gym-cards.component";
 import { AboutComponent } from "./components/about/about.component";
 import { GymCardEditComponent } from "./components/gym-cards/gym-card-edit/gym-card-edit.component";
+import {PokemonDetailsComponent} from "./components/pokemon-details/pokemon-details.component";
+import {PokemonListComponent} from "./components/pokemon-list/pokemon-list.component";
+import {PokemonCardEditComponent} from "./components/pokemon-card-edit/pokemon-card-edit.component";
 
 export const routes: Routes = [
   { path: "", component: GymCardsComponent },
@@ -11,11 +14,11 @@ export const routes: Routes = [
     loadChildren: () =>
       import("./trainer/trainer.routes").then((c) => c.trainerRoutes)
   },
-  {
-    path: "pokemon",
-    loadChildren: () =>
-      import("./pokemon/pokemon.routes").then((c) => c.pokemonRoutes)
-  },
+  // {
+  //   path: "pokemon",
+  //   loadChildren: () =>
+  //     import("./pokemon/pokemon.routes").then((c) => c.pokemonRoutes)
+  // },
 
   // {
   //   path: 'gym/:id',
@@ -26,20 +29,20 @@ export const routes: Routes = [
     component: GymCardEditComponent
   },
 
-  // {
-  //   path: 'pokemon/:id',
-  //   component: PokemonDetailsComponent,
-  // },
+  {
+    path: 'pokemon/:id',
+    component: PokemonDetailsComponent,
+  },
   {
     path: "about",
     component: AboutComponent
-  }
-  // {
-  //   path: 'pokemon-list',
-  //   component: PokemonListComponent,
-  // },
-  // {
-  //   path: 'pokemon-edit/:id',
-  //   component: PokemonCardEditComponent,
-  // },
+  },
+  {
+    path: 'pokemon-list',
+    component: PokemonListComponent,
+  },
+  {
+    path: 'pokemon-edit/:id',
+    component: PokemonCardEditComponent,
+  },
 ];

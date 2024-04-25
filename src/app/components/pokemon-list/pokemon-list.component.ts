@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PokemonServiceService } from '../../pokemon-service.service';
+import { PokemonServiceService } from '../../services/pokemon-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PokemonListBannerComponent } from './pokemon-list-banner/pokemon-list-banner.component';

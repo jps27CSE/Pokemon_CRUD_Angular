@@ -15,7 +15,7 @@
           <td class="px-6 py-4 whitespace-nowrap">{{ trainer.badge }}</td>
           <td class="px-6 py-4 whitespace-nowrap">
             <!-- <button class="btn btn-ghost bg-green-400 btn-xs mr-1">View</button> -->
-            <button class="btn btn-ghost bg-blue-400 btn-xs mr-1">Edit</button>
+            <button class="btn btn-ghost bg-blue-400 btn-xs mr-1" [routerLink]="['update',trainer.id]">Edit</button>
             <!-- <button
               class="btn btn-ghost bg-red-400 btn-xs mr-1"
               (click)="deleteTrainer(trainer)"

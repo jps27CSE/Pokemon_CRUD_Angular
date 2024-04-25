@@ -18,6 +18,11 @@ export class TrainerService {
     const url = `${this.Gym_Trainer_API_URL}`;
     return this.http.post<any>(url, data);
   }
+  updateTrainer(data: any): Observable<any> {
+    const url = `${this.Gym_Trainer_API_URL}/update/${data.id}}`;
+    return this.http.post<any>(url, data);
+  }
+
 
   deleteTrainer(id: number): Observable<any> {
     return this.http.delete<any>(`${this.Gym_Trainer_API_URL}/${id}`);

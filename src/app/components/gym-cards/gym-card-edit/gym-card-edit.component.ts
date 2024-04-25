@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GymServiceService } from '../../../gym-service.service';
+import { GymServiceService } from '../../../services/gym-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 

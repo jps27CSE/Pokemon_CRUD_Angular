@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GymCardComponent } from './gym-card/gym-card.component';
-import { GymServiceService } from '../../gym-service.service';
+import { GymServiceService } from '../../services/gym-service.service';
 import { GymBannerComponent } from './gym-banner/gym-banner.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';

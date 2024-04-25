@@ -1,20 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { GymServiceService } from '../../../services/gym-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PokemonServiceService } from '../../../services/pokemon-service.service';
 import { TrainerService } from '../../../services/trainer.service';
 import { Router } from '@angular/router';
-import { TrainerRegistrationFormComponent } from '../../views/trainer-registration-form/trainer-registration-form.component';
+import { TrainerFormComponent } from '../../views/trainer-form/trainer-form.component';
 
 @Component({
   selector: 'app-trainer-create-container',
   standalone: true,
   templateUrl: './trainer-create-container.component.html',
   styleUrl: './trainer-create-container.component.css',
-  imports: [CommonModule, FormsModule, TrainerRegistrationFormComponent],
+  imports: [CommonModule, FormsModule, TrainerFormComponent],
 })
 export class TrainerCreateContainerComponent implements OnInit {
+  formType: string ='create'
   gyms: any[] = [];
   selectedGymId: string = '';
   pokemons: any[] = [];
@@ -30,11 +31,11 @@ export class TrainerCreateContainerComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.gymService.getAllGyms().subscribe((gyms) => {
+    this.gymService.getAllGyms().subscribe((gyms:any) => {
       this.gyms = gyms;
     });
 
-    this.pokemonService.getAllPokemons().subscribe((pokemons) => {
+    this.pokemonService.getAllPokemons().subscribe((pokemons:any) => {
       this.pokemons = pokemons;
     });
   }
