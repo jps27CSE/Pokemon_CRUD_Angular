@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { PokemonServiceService } from '../../services/pokemon-service.service';
+import { PokemonServiceService } from '../../../services/pokemon-service.service';
 
 @Component({
-  selector: 'app-pokemon-details',
+  selector: 'app-pokemon-details-container',
   standalone: true,
   imports: [RouterLink],
-  templateUrl: './pokemon-details.component.html',
-  styleUrl: './pokemon-details.component.css',
+  templateUrl: './pokemon-details-container.component.html',
+  styleUrl: './pokemon-details-container.component.css',
 })
-export class PokemonDetailsComponent implements OnInit {
+export class PokemonDetailsContainerComponent implements OnInit {
   pokemon: any = {};
 
   constructor(

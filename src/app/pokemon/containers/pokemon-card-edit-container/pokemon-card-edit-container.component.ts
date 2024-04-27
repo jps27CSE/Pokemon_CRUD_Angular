@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { PokemonServiceService } from '../../services/pokemon-service.service';
+import { PokemonServiceService } from '../../../services/pokemon-service.service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { PokemonCardFormComponent } from "../../views/pokemon-card-form/pokemon-card-form.component";
 
 @Component({
-  selector: 'app-pokemon-card-edit',
+  selector: 'app-pokemon-card-edit-container',
   standalone: true,
-  imports: [FormsModule, CommonModule],
-  templateUrl: './pokemon-card-edit.component.html',
-  styleUrl: './pokemon-card-edit.component.css',
+  imports: [FormsModule, CommonModule, PokemonCardFormComponent],
+  templateUrl: './pokemon-card-edit-container.component.html',
+  styleUrl: './pokemon-card-edit-container.component.css',
 })
-export class PokemonCardEditComponent implements OnInit {
+export class PokemonCardEditContainerComponent implements OnInit {
   updatedPokemon: any = {
     name: '',
     type: '',

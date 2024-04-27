@@ -2,9 +2,9 @@ import { Routes } from "@angular/router";
 import { GymCardsContainerComponent } from "./gym/containers/gym-cards-container/gym-cards-container.component";
 import { AboutComponent } from "./components/about/about.component";
 import { GymCardEditContainerComponent } from "./gym/containers/gym-card-edit-container/gym-card-edit-container.component";
-import {PokemonDetailsComponent} from "./components/pokemon-details/pokemon-details.component";
-import {PokemonListComponent} from "./components/pokemon-list/pokemon-list.component";
-import {PokemonCardEditComponent} from "./components/pokemon-card-edit/pokemon-card-edit.component";
+import {PokemonDetailsContainerComponent} from "./pokemon/containers/pokemon-details-container/pokemon-details-container.component";
+import {PokemonListContainerComponent} from "./pokemon/containers/pokemon-list-component-container/pokemon-list-container.component";
+import {PokemonCardEditContainerComponent} from "./pokemon/containers/pokemon-card-edit-container/pokemon-card-edit-container.component";
 
 export const routes: Routes = [
   { path: "", component: GymCardsContainerComponent },
@@ -30,7 +30,7 @@ export const routes: Routes = [
 
   {
     path: 'pokemon/:id',
-    component: PokemonDetailsComponent,
+    component: PokemonDetailsContainerComponent,
   },
   {
     path: "about",
@@ -38,10 +38,10 @@ export const routes: Routes = [
   },
   {
     path: 'pokemon-list',
-    component: PokemonListComponent,
+    component: PokemonListContainerComponent,
   },
   {
     path: 'pokemon-edit/:id',
-    component: PokemonCardEditComponent,
+    component: PokemonCardEditContainerComponent,
   },
 ];

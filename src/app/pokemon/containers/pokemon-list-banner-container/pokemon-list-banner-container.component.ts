@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { PokemonServiceService } from '../../../services/pokemon-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PokemonBannerFormComponent } from "../../views/pokemon-banner-form/pokemon-banner-form.component";
 
 @Component({
-  selector: 'app-pokemon-list-banner',
+  selector: 'app-pokemon-list-banner-container',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './pokemon-list-banner.component.html',
-  styleUrl: './pokemon-list-banner.component.css',
+  imports: [CommonModule, FormsModule, PokemonBannerFormComponent],
+  templateUrl: './pokemon-list-banner-container.component.html',
+  styleUrl: './pokemon-list-banner-container.component.css',
 })
-export class PokemonListBannerComponent implements OnInit {
+export class PokemonListBannerContainerComponent implements OnInit {
   pokemons: any[] = [];
   newPokemonName: string = '';
   newPokemonType: string = '';
@@ -42,11 +43,6 @@ export class PokemonListBannerComponent implements OnInit {
         console.error('Error adding Pokemon:', error);
       }
     );
-
-    console.log('Submitted Pokemon Name:', this.newPokemonName);
-    console.log('Submitted Pokemon Type:', this.newPokemonType);
-    console.log('Submitted Pokemon Level:', this.newPokemonLevel);
-    console.log('Submitted Pokemon Species:', this.newPokemonSpecies);
 
     this.newPokemonName = '';
     this.newPokemonType = '';
