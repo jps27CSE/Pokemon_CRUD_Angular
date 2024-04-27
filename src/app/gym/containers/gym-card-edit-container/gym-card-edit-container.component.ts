@@ -3,15 +3,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GymServiceService } from '../../../services/gym-service.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { GymBannerFormComponent } from "../../views/gym-banner-form/gym-banner-form.component";
 
 @Component({
-  selector: 'app-gym-card-edit',
+  selector: 'app-gym-card-edit-container',
   standalone: true,
-  imports: [CommonModule, FormsModule],
-  templateUrl: './gym-card-edit.component.html',
-  styleUrl: './gym-card-edit.component.css',
+  imports: [CommonModule, FormsModule, GymBannerFormComponent],
+  templateUrl: './gym-card-edit-container.component.html',
+  styleUrl: './gym-card-edit-container.component.css',
 })
-export class GymCardEditComponent implements OnInit {
+export class GymCardEditContainerComponent implements OnInit {
   userID!: number;
   gym: any = {};
   UpdatedGym = '';

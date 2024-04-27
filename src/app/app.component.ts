@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { GymCardsComponent } from './components/gym-cards/gym-cards.component';
+import { GymCardsContainerComponent } from './gym/containers/gym-cards-container/gym-cards-container.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
@@ -15,7 +15,7 @@ import 'aos/dist/aos.css';
   imports: [
     RouterOutlet,
     NavbarComponent,
-    GymCardsComponent,
+    GymCardsContainerComponent,
     FooterComponent,
     FormsModule,
     RouterModule,
@@ -31,5 +31,6 @@ export class AppComponent implements OnInit {
       duration: 1000, // Duration of animation in milliseconds
       once: true, // Animation will only happen once
     });
+
   }
 }

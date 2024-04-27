@@ -2,15 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { GymServiceService } from '../../../services/gym-service.service';
 import { Router } from '@angular/router';
+import { GymBannerComponent } from "../../views/gym-banner/gym-banner.component";
 
 @Component({
-  selector: 'app-gym-banner',
+  selector: 'app-gym-banner-container',
   standalone: true,
-  imports: [FormsModule],
-  templateUrl: './gym-banner.component.html',
-  styleUrl: './gym-banner.component.css',
+  imports: [FormsModule, GymBannerComponent],
+  templateUrl: './gym-banner-container.component.html',
+  styleUrl: './gym-banner-container.component.css',
 })
-export class GymBannerComponent implements OnInit {
+export class GymBannerContainerComponent implements OnInit {
   newGymName: string = '';
 
   constructor(private gymService: GymServiceService, private router: Router) {}
@@ -22,7 +23,6 @@ export class GymBannerComponent implements OnInit {
 
     this.gymService.SaveGym(newName).subscribe(
       (response) => {
-        console.log('New gym created:', response);
         window.location.reload();
         this.router.navigate(['/gyms']);
       },
@@ -30,9 +30,6 @@ export class GymBannerComponent implements OnInit {
         console.error('Error creating gym:', error);
       }
     );
-
-    console.log('Submitted Gym Name:', this.newGymName);
-
     this.newGymName = '';
   }
 

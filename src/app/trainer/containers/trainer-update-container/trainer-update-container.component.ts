@@ -19,12 +19,14 @@ export class TrainerUpdateContainerComponent  implements  OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private trainerService: TrainerService
+
   ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       this.trainerId = params['id'];
       this.getTrainerDetails(this.trainerId);
+
     });
 
     console.log(this.trainerDetails)
