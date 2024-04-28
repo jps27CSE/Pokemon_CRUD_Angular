@@ -14,6 +14,6 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 export class GymBannerComponent {
   @Input() newGymName!: string;
   // @ts-ignore
-  @Input() submitForm()
+  @Input() submitForm(): void
 
 }
